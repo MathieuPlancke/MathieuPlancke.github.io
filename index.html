@@ -1,18 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Mon site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon site de PDF</title>
+    <style>
+        /* Style général de la page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        /* Conteneur des carrés (grille) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* Style des carrés cliquables */
+        .card {
+            background-color: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Effet quand on passe la souris sur un carré */
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World </h1>
-    <div onclick="document.location='https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_d%27Egoroff'">
-        texte
+
+    <h1>Mes Documents PDF</h1>
+
+    <!-- Grille des carrés -->
+    <div class="grid-container">
+        <!-- Remplace "chemin/vers/ton-fichier1.pdf" par le lien ou le nom de ton PDF -->
+        <a href="chemin/vers/ton-fichier1.pdf" class="card" target="_blank">Document 1</a>
+        <a href="chemin/vers/ton-fichier2.pdf" class="card" target="_blank">Document 2</a>
+        <a href="chemin/vers/ton-fichier3.pdf" class="card" target="_blank">Document 3</a>
+        <a href="chemin/vers/ton-fichier4.pdf" class="card" target="_blank">Document 4</a>
     </div>
-    <div onclick="document.location='https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_d%27Egoroff'">
-        texte
-    </div>
-    <div onclick="document.location='https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_d%27Egoroff'">
-        texte
-    </div>
+
 </body>
 </html>
