@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
+    <title>Mon Site</title>
     <style>
-        /* Style général de la page */
+        /* Vos styles CSS ici */
         body {
-            /* font-family: Arial, sans-serif; */
             background-color: #f4f4f9;
             margin: 0;
             padding: 40px;
@@ -21,7 +20,6 @@
             margin-bottom: 40px;
         }
 
-        /* Conteneur des carrés (grille) */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -30,39 +28,49 @@
             max-width: 800px;
         }
 
-        /* Style des carrés cliquables */
         .card {
             background-color: #ffffff;
             border: 2px solid #ddd;
             border-radius: 10px;
-            height: 150px;
+            height: 180px;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            flex-direction: column;
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            font-size: 1.1em;
-            transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
         }
 
-        /* Effet quand on passe la souris sur un carré */
         .card:hover {
-            /* transform: translateY(-5px); */
-            background-color: #f4f4f9;
-            color: black;
             border-color: black;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .card span {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
         }
     </style>
 </head>
+<body>
+
+    <h1>Mes documents</h1>
+
+    <div class="grid-container">
+        <!-- Votre carte cliquable avec aperçu PDF -->
+        <a href="chemin/vers/votre-document.pdf" target="_blank" class="card">
+            <img src="chemin/vers/votre-miniature.png" alt="Aperçu">
+            <span>Mon Document PDF</span>
+        </a>
+    </div>
 
 </body>
-bonjour
-</body>
-
-
-
-
-  
+</html>
